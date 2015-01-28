@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+  <!-- TODO Revisit and theme / popupTheme-->
+  <com.github.ihal20.drybones.widget.AppBar
+      android:id="@+id/app_bar_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="?attr/actionBarSize"
+      android:background="?attr/colorPrimary">
+  </com.github.ihal20.drybones.widget.AppBar>
+
+
+  <com.github.ihal20.drybones.flowmortar.MortarScreenSwitcherFrame
+      android:id="@+id/container"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      />
+</LinearLayout>

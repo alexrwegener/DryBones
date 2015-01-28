@@ -4,6 +4,7 @@ buildscript {
   }
   dependencies {
     classpath 'com.neenbedankt.gradle.plugins:android-apt:1.2'
+    classpath 'net.ltgt.gradle:gradle-errorprone-plugin:latest.release'
   }
 }
 
@@ -25,6 +26,7 @@ def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim
 apply plugin: 'com.android.application'
 apply plugin: 'idea'
 apply plugin: 'android-apt'
+apply plugin: 'errorprone'
 
 android {
   compileSdkVersion 21
@@ -94,9 +96,6 @@ dependencies {
   compile 'com.squareup.flow:flow:0.9-SNAPSHOT'
   compile 'com.squareup.mortar:mortar:0.17-SNAPSHOT'
   compile 'com.squareup.mortar:dagger1support:0.17-SNAPSHOT'
-
-  //Fonts
-  compile 'uk.co.chrisjenx:calligraphy:1.2.0'
 
   //Utils
   compile 'joda-time:joda-time:2.7'
